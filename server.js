@@ -40,6 +40,19 @@ app.get('/', async function (request, response) {
    response.render('index.liquid')
 })
 
+app.get('/lessons', async function (request, response) {
+  // Render index.liquid uit de Views map
+  const playlistResponse = await fetch('https://fdnd-agency.directus.app/items/tm_playlist')
+  const playlistResponseJSON = await playlistResponse.json()  
+
+ // Geef hier eventueel data aan mee
+ response.render('lessons.liquid', {
+  title: 'Lessons',
+  playlist: playlistResponseJSON.data
+ })
+})
+
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
 app.post('/', async function (request, response) {
