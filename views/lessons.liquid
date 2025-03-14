@@ -1,13 +1,48 @@
-{% render 'partials/head.liquid', title: 'Home pagina' %}
+{% render 'partials/head.liquid', title: 'Lessons' %}
 <main>
     <h1>Lessons</h1>
+    <ul class="methode-knop">
+        <li><button>1.Listening</button></li>
+    </ul>
 
 
+    <section class="eigen-playlists">
+        <h2>Own playlist</h2>
+        <div class="eigen-playlist-slider">
+            {% for playlist in playlists %}
+                <ul class="playlist-items">
+                    <li>
+                        <img src="https://fdnd-agency.directus.app/assets/{{ playlist.image }}?width=112&height=95">            
+                        <h3>{{ playlist.title }}</h2>
+                        <button>
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0874 7.06141C10.7817 6.52417 10.7817 5.47595 10.0874 4.93871C7.98914 3.31514 5.6461 2.03543 3.14602 1.14749L2.68929 0.985277C1.8155 0.674939 0.892544 1.26613 0.774251 2.16812C0.443739 4.68826 0.443739 7.31186 0.774251 9.83201C0.892543 10.734 1.8155 11.3252 2.68929 11.0148L3.14602 10.8526C5.6461 9.96469 7.98914 8.68498 10.0874 7.06141Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </section>
 
+    <section class="all-stories">
+        <h2>All stories</h2>
+        <div class="all-stories-slider">
+            {% for playlist in playlists %}
+                <ul class="all-stories-items">
+                    <li>
+                        <img src="https://fdnd-agency.directus.app/assets/{{ playlist.image }}?width=112&height=95">            
+                        <h3>{{ playlist.title }}</h2>
+                        <button>
+                            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0874 7.06141C10.7817 6.52417 10.7817 5.47595 10.0874 4.93871C7.98914 3.31514 5.6461 2.03543 3.14602 1.14749L2.68929 0.985277C1.8155 0.674939 0.892544 1.26613 0.774251 2.16812C0.443739 4.68826 0.443739 7.31186 0.774251 9.83201C0.892543 10.734 1.8155 11.3252 2.68929 11.0148L3.14602 10.8526C5.6461 9.96469 7.98914 8.68498 10.0874 7.06141Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </section>
 
-
-
-
-    
 </main>
 {% render 'partials/footer.liquid'%}
