@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{  
+        /* Home Background */
+            --van-kleur-home: #3F93B7;
+            --naar-kleur-home: #1C5872;
+         
+        /* Story nightmode */
+            --van-kleur-story-nightmode: #040404;
+            --naar-kleur-story-nightmode: #471871;
+         
+        /* Menu lay-over */
+            --menu-lay-over-kleur: #292929;
+            --menu-lay-over-opacity: 95%;
+        
+        /* Menu knoppen */
+            --button-color-one: #3F92B6;
+            --hover-button-color-one: #3D7A95;
+            
+            --button-color-two: #599AE7;
+            --hover-button-color-two: #4D7EB7;
+            
+            --button-color-three: #954BE2;
+            --hover-button-color-three: #451ACF;
+            
+            --button-color-four: #06A192;
+            --hover-button-color-four: #078377;
+            
+            --button-color-five: #FD8C73;
+            --hover-button-color-five: #EA775E;
+
+            --button-color-six: #F3A22A;
+            --hover-button-color-six:#e78b00;
+        
+        /* Methode kleuren*/
+            --methode-background-color: ;
+            --methode-color-one: #1CB854;
+            --methode-color-two: #37C6AB;
+            --methode-color-three: #059CC0;
+            --methode-color-four: #FF8C59;
+            --methode-color-five: #FFA02E;
+        
+        /* Statistics */
+            --van-kleur-statistics: #219B9B;
+            --naar-kleur-statistics: #1B7070;
+        
+        /* Testing */
+            --van-kleur-testing: #21599B;
+            --naar-kleur-testing: #1B3D70;
+        
+        /* Profile */
+            --van-kleur-profile: #F0775D;
+            --naar-kleur-profile: ##B45751;
+        
+        /* Method */
+            --van-kleur-method: #471871;
+            --naar-kleur-method: #142151;
+
+        /* Lists items achtergrond */
+            --main-achtergrond-list-items:#ffffff;
+        
+        /* Typografie */
+            --font-text: 'Poppins', sans-serif; 
+
+        /* Typografie kleuren */
+            --font-main-kleur:#ffffff;
+        /* Font-sizes*/
+            --font-size-h1: 1.8rem;
+            --font-size-h2: 1.3rem  ;
+            --font-size-h3: 0.75rem;
+            --font-size-story-title: 0.75rem;
+            --font-size-story-description: 0.5rem;
+            --font-size-method:0.75rem;
+        
+        /* Font-weights */
+            --font-weight-thin: 100;
+            --font-weight-extra-light: 200;
+            --font-weight-light: 300;
+            --font-weight-regular: 400;
+            --font-weight-medium: 500;
+            --font-weight-semi-bold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extra-bold: 800;
+            --font-weight-black: 900;
+        
+        /* Line-heights */
+            --line-height-h1: 3rem;
+            --line-height-h2: 1.375rem;
+            --line-height-h3: 1.3125rem;
+            --line-height-story-title: 0.938rem;
+            --line-height-story-description: 0.75rem;
+}
+
+body{
+    font-family: var(--font-text),Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgba(20,33,81,1) 0%, rgba(71,24,113,1) 35%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:black;
+    height: 100%;  
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+main{
+    margin: 0 30px;
+    width: 390px;
+
+}
+
+h1{
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-h1);
+    color: var(--font-main-kleur);
+}
+
+h2{
+    font-size: var(--font-size-h2);
+    color: var(--font-main-kleur);
+    text-align: left;
+    margin: 0 0 -10px 0;
+}
+
+h3{
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-medium);
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+.methode-knop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+
+    li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+
+        button{
+            width: 290px;
+            height: 37px;
+            border-radius: 8px;
+            border-style: none;
+            background-color: var(--methode-color-one);
+            color: var(--font-main-kleur);
+            font-weight: var(--font-weight-medium);
+           
+        }
+    }
+}
+
+
+.eigen-playlists{
+    margin: 0px 0 50px 15px;
+    
+
+    .eigen-playlist-slider{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        overflow: auto;
+
+    }
+    .playlist-items{
+        list-style-type: none;
+        background-color:var(--main-achtergrond-list-items) ;
+        width: 136px ;
+        height: 189px;
+        padding-left: 0;
+        padding: 15px;
+        border-radius: 8px;
+
+        img{
+            border-radius: 4px;
+        }
+
+        button{
+            background-color:var(--button-color-six) ;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+
+            &:hover{
+                background-color: var(--hover-button-color-six);
+            }
+        }
+
+
+    }
+}
+    
+.all-stories{
+    margin: 0px 0 50px 15px; 
+
+    .playlist-items{
+
+
+        .all-stories-items{
+
+        }
+    }
+
+}
+
+    
+
+
+
+ 
