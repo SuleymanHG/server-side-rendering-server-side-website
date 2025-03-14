@@ -48,10 +48,21 @@ app.get('/lessons', async function (request, response) {
  // Geef hier eventueel data aan mee
  response.render('lessons.liquid', {
   title: 'Lessons',
-  playlist: playlistResponseJSON.data
+  playlists: playlistResponseJSON.data
  })
 })
 
+app.get('/stories', async function (request, response) {
+  // Render index.liquid uit de Views map
+  const storiesResponse = await fetch('https://fdnd-agency.directus.app/items/tm_story')
+  const storiesResponseJSON = await storiesResponse.json()  
+
+ // Geef hier eventueel data aan mee
+ response.render('allstories.liquid', {
+  title: 'All stories',
+  allstorie: storiesResponseJSON.data
+ })
+})
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
@@ -63,7 +74,7 @@ app.post('/', async function (request, response) {
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 8001)
 
 // Start Express op, haal daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
